@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vertex Wave</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 500px; margin: 40px auto; background: #f7f9fb; }
+    h1 { text-align: center; }
+    .episode { border-bottom: 1px solid #ddd; padding: 1em 0; }
+    audio { width: 100%; margin-top: 0.5em; }
+  </style>
+</head>
+<body>
+  <h1>Vertex <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vertex Podcast Player</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 500px; margin: 40px auto; background: #f7f9fb; }
+    h1 { text-align: center; }
+    .episode { border-bottom: 1px solid #ddd; padding: 1em 0; }
+    audio { width: 100%; margin-top: 0.5em; }
+  </style>
+</head>
+<body>
+  <h1>Vertex Wave</h1>
+  <div id="episodes"></div>
+  <script>
+    // Example: Using the free "99% Invisible" podcast RSS feed
+    const rssUrl = 'https://feeds.simplecast.com/4MvgQ73R';
+
+    fetch('https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(rssUrl))
+      .then(response => response.json())
+      .then(data => {
+        const episodesDiv = document.getElementById('episodes');
+        data.items.slice(0, 5).forEach(episode => {
+          const div = document.createElement('div');
+          div.className = 'episode';
+          div.innerHTML = `<strong>${episode.title}</strong><br>
+            <em>${new Date(episode.pubDate).toLocaleDateString()}</em><br>
+            <audio controls src="${episode.enclosure.link}"></audio>`;
+          episodesDiv.appendChild(div);
+        });
+      });
+  </script>
+</body>
+</html>
+</h1>
+  <div id="episodes"></div>
+  <script>
+    // Example: Using the free "99% Invisible" podcast RSS feed
+    const rssUrl = 'https://feeds.simplecast.com/4MvgQ73R';
+
+    fetch('https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(rssUrl))
+      .then(response => response.json())
+      .then(data => {
+        const episodesDiv = document.getElementById('episodes');
+        data.items.slice(0, 5).forEach(episode => {
+          const div = document.createElement('div');
+          div.className = 'episode';
+          div.innerHTML = `<strong>${episode.title}</strong><br>
+            <em>${new Date(episode.pubDate).toLocaleDateString()}</em><br>
+            <audio controls src="${episode.enclosure.link}"></audio>`;
+          episodesDiv.appendChild(div);
+        });
+      });
+  </script>
+</body>
+</html>
